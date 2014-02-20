@@ -4,53 +4,31 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Basic Drawing App</title>
+	<link type="text/css" rel="stylesheet" media="screen" href="maincss.css" />
+
+	<title>Dinner Planner</title>
 
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
-
-	<style>
-	body {
-		background: repeat;
-	}
-	#container {
-		position: absolute;
-		height: 100%;
-		width: 100%;
-	}
-	#banner {
-		position: absolute;
-		top: 0px;
-		left: 0px;
-		right: 0px;
-		width: 100%;
-		height: 100px;
-		z-index: -1;
-		background-color: #FFFF00;
-		border: 2px solid #000000;
-		opacity: 0.6;
-		margin: 0 auto;
-	}
-
-	#exampleView {
-		display: table;
-		overflow: hidden;
-		border: 1px solid #000000;
-		padding: 0px;
-		margin: 0 auto;
-		background-color: red;
-		visibility: visible;
-		
-	}
-
-	</style>
 </head>
 
 </head>
-<body>
-	<div class="container">
-		<div id="banner" alt="Banner Image"/>
-		<h1>Dinner planner</h1>
+<banner>
+	<table id="header">
+		<tr>
+			<td id="a">
+				<h1 id="headertext">homelette</h1>
+			</td>
+			<td id="b">
+				<h2 id="header_after_text">From the best chefs in the world directly to your kitchen</h2>
+			</td>
+		</tr>
+	</table>
+</banner>
+
+<body background="images/main_background.jpg" id="body">
+	<div id = "leftMenu">
+		<h2 id ="h2">My Dinner</h2>
 		<div id="exampleView">
 			<div>
 				Number of guest <span id="numberOfGuests"></span>
@@ -60,7 +38,48 @@
 				<button id="minusGuest" class="btn"><span class="glyphicon glyphicon-minus"></span></button>
 			</div>
 		</div>
-	</div>
+
+		<table id = "dishes">
+			<header>
+				<tr>
+					<td> 
+						<h2>Dish</h2>
+					</td>	
+					<td>
+						<h2>Cost</h2>
+					</td>
+				</tr>
+			</header>
+		</table>
+		<p id = "totalPrice">SEK 0.00</p>
+		<button type = "Button" id = "confirmDinner">Confirm Dinner</button>
+	</div>			
+
+
+	<div>
+		<table id = "smallmainframe">
+			<tr>
+				<td>
+					<h2 id="h2">A Home Dinner Device</h2>
+				</td>¨
+			</tr>
+			<tr>
+				<td>
+					<h3 id="h3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h3>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<h3 id="h3">Start quickly</h3>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<button type="Button" id="create">Create new dinner</button>
+				</td>
+			</tr>
+		</table>	
+	</div>	
 
 	<!-- jQuery -->
 	<script src="https://code.jquery.com/jquery.js"></script>
