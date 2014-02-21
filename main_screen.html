@@ -10,9 +10,9 @@
 
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
-</head>
 
 </head>
+
 <banner>
 	<table id="header">
 		<tr>
@@ -26,36 +26,7 @@
 	</table>
 </banner>
 
-<body background="images/main_background.jpg" id="body">
-	<div id = "leftMenu">
-		<h2 id ="h2">My Dinner</h2>
-		<div id="exampleView">
-			<div>
-				Number of guest <span id="numberOfGuests"></span>
-			</div>
-			<div>
-				<button id="plusGuest" class="btn"><span class="glyphicon glyphicon-plus"></span></button>
-				<button id="minusGuest" class="btn"><span class="glyphicon glyphicon-minus"></span></button>
-			</div>
-		</div>
-
-		<table id = "dishes">
-			<header>
-				<tr>
-					<td> 
-						<h2>Dish</h2>
-					</td>	
-					<td>
-						<h2>Cost</h2>
-					</td>
-				</tr>
-			</header>
-		</table>
-		<p id = "totalPrice">SEK 0.00</p>
-		<button type = "Button" id = "confirmDinner">Confirm Dinner</button>
-	</div>			
-
-
+<body background="images/main_background.jpg" id="body"> 
 	<div>
 		<table id = "smallmainframe">
 			<tr>
@@ -80,16 +51,5 @@
 			</tr>
 		</table>	
 	</div>	
-
-	<!-- jQuery -->
-	<script src="https://code.jquery.com/jquery.js"></script>
-	<!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
-	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-
-	<!-- The application JavaScript code -->
-	<script src="js/app.js"></script>
-	<script src="js/model/dinnerModel.js"></script>
-	<script src="js/view/exampleView.js"></script>
-	<script src="js/view/exampleViewController.js"></script>
 </body>
 </html>
