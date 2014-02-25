@@ -9,3 +9,8 @@ $(function() {
 	var exampleView = new ExampleView($("#exampleView"),model);
    	var exampleViewController = new ExampleViewController(exampleView,model);
 });
+
+function goToMain(){
+	document.getElementById("leftMenu").style.display = 'block';
+	document.getElementById("smallmainframe").style.display = 'none';
+}
