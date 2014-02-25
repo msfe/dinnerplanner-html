@@ -9,8 +9,7 @@ var ExampleViewController = function(view, model ) {
 		model.setNumberOfGuests(model.getNumberOfGuests() - 1);
 	});
 
-	view.confirmDinner.click(function(){
-		alert("hej");
+	view.confirmDinnerButton.click(function(){
 		goToConfirmation();
 	});
 }

@@ -6,7 +6,7 @@ var ExampleView = function (container,model) {
 this.numberOfGuests = container.find("#numberOfGuests");
 this.plusButton = container.find("#plusGuest");
 this.minusButton = container.find("#minusGuest");
-this.confirmDinner = container.find("#confirmDinner");
+this.confirmDinnerButton = container.find("#confirmDinner");
 
     //Creating the components dynamically. Here we create the following HTML content:
     //
