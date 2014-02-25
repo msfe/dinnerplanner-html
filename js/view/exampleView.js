@@ -21,12 +21,7 @@ this.minusButton = container.find("#minusGuest");
     div.html("Total menu price ");
     //and we add the text-primary class to make it blue
     div.addClass("text-primary");
-
     
-    //var body=document.getElementsByTagName('body')[0]; == div
-
-    
-    div.append(this.dishes);
     
     //total price we store in object variable (using this) so we can access it later
     this.totalPrice = $("<span>");
@@ -39,6 +34,16 @@ this.minusButton = container.find("#minusGuest");
     tbl.style.width='100%';
     tbl.setAttribute('border','4');
     var tbdy=document.createElement('tbody');
+    var tr=document.createElement('tr');
+    var th=document.createElement('th');
+    th.appendChild(document.createTextNode("Dish"));
+    tr.appendChild(th);
+    var th=document.createElement('th');
+    th.appendChild(document.createTextNode("Cost"));
+    tr.appendChild(th);
+    tbdy.appendChild(tr);
+
+
     var menu = model.getFullMenu();
     for(var key in menu){
         var dish = menu[key];
