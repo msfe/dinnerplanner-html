@@ -10,8 +10,7 @@
 
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
-</head>
-
+	
 </head>
 <banner>
 	<table id="header">
@@ -52,7 +51,7 @@
 			</header>
 		</table>
 		<p id = "totalPrice">SEK 0.00</p>
-		<button type = "Button" id = "confirmDinner">Confirm Dinner</button>
+		<button type = "Button" id = "confirmDinner" >Confirm Dinner</button>
 	</div>			
 
 
@@ -75,7 +74,7 @@
 			</tr>
 			<tr>
 				<td>
-					<button type="Button" id="create">Create new dinner</button>
+					<button type="Button" id="create" onclick="goToMain()">Create new dinner</button>
 				</td>
 			</tr>
 		</table>	
@@ -119,5 +118,7 @@
 	<script src="js/model/dinnerModel.js"></script>
 	<script src="js/view/exampleView.js"></script>
 	<script src="js/view/exampleViewController.js"></script>
+	
+
 </body>
 </html>

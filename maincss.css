@@ -79,6 +79,7 @@
 	margin-top: 125px;
 	background: rgb(255, 255, 0) transparent ;
 	background: rgba(255, 255, 0, 0.7) ;
+	display: none;
 }
 
 #h2 {
