@@ -57,6 +57,16 @@
 	display: none;
 }
 
+#overview_header {
+	width: 100%;
+	height:100px;
+	position: fixed;
+	margin-top: 125px;
+	background: rgb(255, 255, 255);
+	display: none;
+}
+
+
 #instructionsframe {
 	position: fixed;
 	width: 100%;
@@ -90,6 +100,10 @@
 	margin-top: 125px;
 	background: rgb(255, 255, 0) transparent ;
 	background: rgba(255, 255, 0, 0.7) ;
+	display: none;
+}
+
+#showDishImagesAndPrice {
 	display: none;
 }
 
