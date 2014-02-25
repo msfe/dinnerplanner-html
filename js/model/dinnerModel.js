@@ -1,9 +1,10 @@
 //DinnerModel Object constructor
 var DinnerModel = function() {
- 
+
 	var menu = [];
 	var numberOfGuests =3; //set default number of guests
 	menu['starter'] = 1; //set a starter to the menu, to use for testing
+	menu['main course'] = 100; //set a starter to the menu, to use for testing
 
 
 	this.setNumberOfGuests = function(num) {
@@ -41,6 +42,16 @@ var DinnerModel = function() {
 		return ingredients;
 	}
 
+	//Returns the cost for one portion of a single dish
+	this.getPriceOfDish = function(dish) {
+		var ingredients = dish.ingredients;
+		var sum = 0.;
+		for(key in ingredients) {
+			sum += parseFloat(ingredients[key].price);
+		}
+		return sum;
+	}
+
 	//Returns the total price of the menu (all the ingredients multiplied by number of guests).
 	this.getTotalMenuPrice = function() {
 		var ingredients = this.getAllIngredients();
@@ -69,31 +80,35 @@ var DinnerModel = function() {
 	//you can use the filter argument to filter out the dish by name or ingredient (use for search)
 	//if you don't pass any filter all the dishes will be returned
 	this.getAllDishes = function (type,filter) {
-	  return $(dishes).filter(function(index,dish) {
-		var found = true;
-		if(filter){
-			found = false;
-			$.each(dish.ingredients,function(index,ingredient) {
-				if(ingredient.name.indexOf(filter)!=-1) {
+		return $(dishes).filter(function(index,dish) {
+			var found = true;
+			if(filter){
+				found = false;
+				$.each(dish.ingredients,function(index,ingredient) {
+					if(ingredient.name.indexOf(filter)!=-1) {
+						found = true;
+					}
+				});
+				if(dish.name.indexOf(filter) != -1)
+				{
 					found = true;
 				}
-			});
-			if(dish.name.indexOf(filter) != -1)
-			{
-				found = true;
 			}
-		}
-	  	return dish.type == type && found;
-	  });	
+			return dish.type == type && found;
+		});	
 	}
 
 	//function that returns a dish of specific ID
 	this.getDish = function (id) {
-	  for(key in dishes){
+		for(key in dishes){
 			if(dishes[key].id == id) {
 				return dishes[key];
 			}
 		}
+	}
+
+	this.getDishName = function (type) {
+		return menu[type].name;
 	}
 
 
@@ -116,28 +131,28 @@ var DinnerModel = function() {
 			'quantity':0.5,
 			'unit':'',
 			'price':10
-			},{
+		},{
 			'name':'milk',
 			'quantity':30,
 			'unit':'ml',
 			'price':6
-			},{
+		},{
 			'name':'brown sugar',
 			'quantity':7,
 			'unit':'g',
 			'price':1
-			},{
+		},{
 			'name':'ground nutmeg',
 			'quantity':0.5,
 			'unit':'g',
 			'price':12
-			},{
+		},{
 			'name':'white bread',
 			'quantity':2,
 			'unit':'slices',
 			'price':2
-			}]
-		},{
+		}]
+	},{
 		'id':2,
 		'name':'Sourdough Starter',
 		'type':'starter',
@@ -148,18 +163,18 @@ var DinnerModel = function() {
 			'quantity':0.5,
 			'unit':'g',
 			'price':4
-			},{
+		},{
 			'name':'warm water',
 			'quantity':30,
 			'unit':'ml',
 			'price':0
-			},{
+		},{
 			'name':'all-purpose flour',
 			'quantity':15,
 			'unit':'g',
 			'price':2
-			}]
-		},{
+		}]
+	},{
 		'id':3,
 		'name':'Baked Brie with Peaches',
 		'type':'starter',
@@ -170,18 +185,18 @@ var DinnerModel = function() {
 			'quantity':10,
 			'unit':'g',
 			'price':8
-			},{
+		},{
 			'name':'raspberry preserves',
 			'quantity':15,
 			'unit':'g',
 			'price':10
-			},{
+		},{
 			'name':'peaches',
 			'quantity':1,
 			'unit':'',
 			'price':4
-			}]
-		},{
+		}]
+	},{
 		'id':100,
 		'name':'Meat balls',
 		'type':'main dish',
@@ -192,58 +207,58 @@ var DinnerModel = function() {
 			'quantity':115,
 			'unit':'g',
 			'price':20
-			},{
+		},{
 			'name':'sea salt',
 			'quantity':0.7,
 			'unit':'g',
 			'price':3
-			},{
+		},{
 			'name':'small onion, diced',
 			'quantity':0.25,
 			'unit':'',
 			'price':2
-			},{
+		},{
 			'name':'garlic salt',
 			'quantity':0.7,
 			'unit':'g',
 			'price':2
-			},{
+		},{
 			'name':'Italian seasoning',
 			'quantity':0.6,
 			'unit':'g',
 			'price':3
-			},{
+		},{
 			'name':'dried oregano',
 			'quantity':0.3,
 			'unit':'g',
 			'price':3
-			},{
+		},{
 			'name':'crushed red pepper flakes',
 			'quantity':0.6,
 			'unit':'g',
 			'price':3
-			},{
+		},{
 			'name':'Worcestershire sauce',
 			'quantity':6,
 			'unit':'ml',
 			'price':7
-			},{
+		},{
 			'name':'milk',
 			'quantity':20,
 			'unit':'ml',
 			'price':4
-			},{
+		},{
 			'name':'grated Parmesan cheese',
 			'quantity':5,
 			'unit':'g',
 			'price':8
-			},{
+		},{
 			'name':'seasoned bread crumbs',
 			'quantity':15,
 			'unit':'g',
 			'price':4
-			}]
-		},{
+		}]
+	},{
 		'id':101,
 		'name':'MD 2',
 		'type':'main dish',
@@ -254,18 +269,18 @@ var DinnerModel = function() {
 			'quantity':1,
 			'unit':'pieces',
 			'price':8
-			},{
+		},{
 			'name':'ingredient 2',
 			'quantity':15,
 			'unit':'g',
 			'price':7
-			},{
+		},{
 			'name':'ingredient 3',
 			'quantity':10,
 			'unit':'ml',
 			'price':4
-			}]
-		},{
+		}]
+	},{
 		'id':102,
 		'name':'MD 3',
 		'type':'main dish',
@@ -276,18 +291,18 @@ var DinnerModel = function() {
 			'quantity':2,
 			'unit':'pieces',
 			'price':8
-			},{
+		},{
 			'name':'ingredient 2',
 			'quantity':10,
 			'unit':'g',
 			'price':7
-			},{
+		},{
 			'name':'ingredient 3',
 			'quantity':5,
 			'unit':'ml',
 			'price':4
-			}]
-		},{
+		}]
+	},{
 		'id':102,
 		'name':'MD 4',
 		'type':'main dish',
@@ -298,18 +313,18 @@ var DinnerModel = function() {
 			'quantity':1,
 			'unit':'pieces',
 			'price':4
-			},{
+		},{
 			'name':'ingredient 2',
 			'quantity':12,
 			'unit':'g',
 			'price':7
-			},{
+		},{
 			'name':'ingredient 3',
 			'quantity':6,
 			'unit':'ml',
 			'price':4
-			}]
-		},{
+		}]
+	},{
 		'id':200,
 		'name':'Chocolat Ice cream',
 		'type':'dessert',
@@ -320,8 +335,8 @@ var DinnerModel = function() {
 			'quantity':100,
 			'unit':'ml',
 			'price':6
-			}]
-		},{
+		}]
+	},{
 		'id':201,
 		'name':'Vanilla Ice cream',
 		'type':'dessert',
@@ -332,8 +347,8 @@ var DinnerModel = function() {
 			'quantity':100,
 			'unit':'ml',
 			'price':6
-			}]
-		},{
+		}]
+	},{
 		'id':202,
 		'name':'Strawberry',
 		'type':'dessert',
@@ -344,26 +359,26 @@ var DinnerModel = function() {
 			'quantity':100,
 			'unit':'ml',
 			'price':6
-			}]
-		}
+		}]
+	}
 	];
 
 	/*****************************************  
 	      Observable implementation    
-	*****************************************/
+	      *****************************************/
 
-	var observers = [];
+	      var observers = [];
 
-	this.addObserver = function(observer) 
-	{
-		observers.push(observer);
-	}
+	      this.addObserver = function(observer) 
+	      {
+	      	observers.push(observer);
+	      }
 
-	var notifyObservers = function(arg) 
-	{
-		for(var i=0; i<observers.length; i++) 
-		{
-			observers[i].update(arg);
-		}	
-	}
-}
+	      var notifyObservers = function(arg) 
+	      {
+	      	for(var i=0; i<observers.length; i++) 
+	      	{
+	      		observers[i].update(arg);
+	      	}	
+	      }
+	  }
