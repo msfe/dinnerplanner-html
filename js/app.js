@@ -15,3 +15,10 @@ function goToMain(){
 	document.getElementById("searchframe").style.display = 'block';
 	document.getElementById("smallmainframe").style.display = 'none';
 }
+
+function goToConfirmation() {
+	document.getElementById("overview_header").style.display = 'block';
+	document.getElementById("showDishImagesAndPrice").style.display = 'block';
+	document.getElementById("searchframe").style.display = 'none';
+	document.getElementById("leftMenu").style.display = 'none';
+}
