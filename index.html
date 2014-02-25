@@ -95,18 +95,62 @@
 					</td>
 					<td id="searchCategory">
 						<select>
- 							<option value="appetizer">Appetizer</option>
-  							<option value="main">Main Course</option>
-  							<option value="dessert">Dessert</option>
+							<option value="appetizer">Appetizer</option>
+							<option value="main">Main Course</option>
+							<option value="dessert">Dessert</option>
 						</select>
 					</td>
 				</tr>
 			</table>
 		</div>
 		<div id = "dish_images">
-
+			<!--Empty div, accessed by javascript-->
 		</div>	
 	</div>
+
+	<div id = "instructionsframe">
+		<table id="instructionTable">
+			<tr>
+				<td id="instructionPart">
+					<div id = "infoDish">
+						<h2 id = "dishName">[Dish Name]</h2>
+						<img id = "dishImage">[Dish Image]</img>
+						<h3 id="h3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h3>
+						<button id = "backToSelectDish" type = "Button">Back to Select Dish</button>
+					</div>
+				</td>
+				<td id="IngridientsPart">
+					<div id = "ingridients">
+						<div id = "ingridientsForNumberOfPersons">
+
+						</div>
+						<div id ="ingridientsList">
+
+						</div>
+
+						<div id ="confirmationAndTotPrice">
+							<table id="confirm_table">
+								<tr>
+									<td id="confirmButtonPart">
+										<button id = "ConfirmButton" type = "Button">Confirm Dish</button>
+									</td>
+									<td id="TotPricePart">
+										<h3 id = "TotPrice">Total Price</h3>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<h2 id = "h2">Preparations</h2>
+					<h3 id = "preparations">[Preparations]</h3>
+				</td>
+			<tr>		
+		</table>
+	</div>		
 
 	<!-- jQuery -->
 	<script src="https://code.jquery.com/jquery.js"></script>
