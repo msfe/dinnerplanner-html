@@ -21,12 +21,41 @@ var ExampleView = function (container,model) {
 	div.html("Total menu price ");
 	//and we add the text-primary class to make it blue
 	div.addClass("text-primary");
+
+	
+	//var body=document.getElementsByTagName('body')[0]; == div
+
+	
+	div.append(this.dishes);
+	
 	//total price we store in object variable (using this) so we can access it later
 	this.totalPrice = $("<span>");
 	//we set the id of the total price span
 	this.totalPrice.attr("id","totalPrice");
 	//we add total price span to the div
 	div.append(this.totalPrice);
+	
+	var tbl=document.createElement('table');
+tbl.style.width='100%';
+tbl.setAttribute('border','4');
+var tbdy=document.createElement('tbody');
+for(var i=0;i<3;i++){
+    var tr=document.createElement('tr');
+    for(var j=0;j<2;j++){
+        if(i==2 && j==1){
+                break
+                 } else {
+        var td=document.createElement('td');
+        td.appendChild(document.createTextNode('ooooo'))
+        i==1&&j==1?td.setAttribute('rowSpan','2'):null;
+        tr.appendChild(td)
+        }
+    }
+    tbdy.appendChild(tr);
+}
+tbl.appendChild(tbdy);
+div.append(tbl);
+	
 	//finally we add the div to the view container
 	container.append(div);
 	
@@ -47,4 +76,5 @@ var ExampleView = function (container,model) {
 		this.totalPrice.html(model.getTotalMenuPrice());
 	}
 }
+
  
