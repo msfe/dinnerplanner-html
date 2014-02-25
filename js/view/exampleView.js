@@ -40,12 +40,12 @@ this.minusButton = container.find("#minusGuest");
     tbl.setAttribute('border','4');
     var tbdy=document.createElement('tbody');
     var menu = model.getFullMenu();
-    for(key in menu){
-        var dish = model.getDish(menu[key]);
-        alert(dish);
+    for(var key in menu){
+        var dish = menu[key];
+
         var tr=document.createElement('tr');
         var td=document.createElement('td');
-        td.appendChild(document.createTextNode(model.getDishName(dish)));
+        td.appendChild(document.createTextNode(dish.name));
         tr.appendChild(td);
 
         var td=document.createElement('td');
