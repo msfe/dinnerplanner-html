@@ -20,9 +20,6 @@ body {
 /* HEADER */
 #header {
 	background:url(images/header.jpg);
-
-
-
 	position: fixed;
 	top: 0px;
 	width: 100%;
