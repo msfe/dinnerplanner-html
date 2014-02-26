@@ -29,8 +29,3 @@ function goToEdit() {
 	document.getElementById("searchframe").style.display = 'block';
 	document.getElementById("leftMenu").style.display = 'block';
 }
-
-function goToSHowFullRecipe() {
-	document.getElementById("overview_div").style.display = 'none';
-	document.getElementById("showFullMenu").style.display = 'block';
-}
