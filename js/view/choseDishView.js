@@ -14,7 +14,10 @@ var ChooseDishView = function (container,model, dish) {
     
     //Set the inital values of the components
     this.dishName.html(dish.name);
-    this.dishImage.html(dish.image);
+    var src = dish.image;
+    alert("images/" + src);
+    this.dishImage.src = "images/" + src;
+    alert(this.dishImage.src);
     this.TotPrice.html(model.getPriceOfDish(dish));
     this.preparations.html(dish.description);
     
