@@ -31,5 +31,6 @@ function goToEdit() {
 }
 
 function goToSHowFullRecipe() {
-
+	document.getElementById("overview_div").style.display = 'none';
+	document.getElementById("showFullMenu").style.display = 'block';
 }
