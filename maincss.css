@@ -210,13 +210,6 @@ font-family: "Optima", "Segoe", "Segoe UI", "Candara", "Calibri", Arial, sans-se
 display: inline-block;
 }
 
-#overviewImageAndTotal{
-}
-
-#menuTotalPrice{
-	display: inline-block;
-}
-
 #printButtonPart{
 	clear:both;
 }
