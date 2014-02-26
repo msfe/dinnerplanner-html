@@ -29,7 +29,3 @@ function goToEdit() {
 	document.getElementById("searchframe").style.display = 'block';
 	document.getElementById("leftMenu").style.display = 'block';
 }
-
-function goToSHowFullRecipe() {
-
-}
