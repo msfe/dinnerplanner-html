@@ -8,7 +8,8 @@ $(function() {
 	//And create the needed controllers and views
 	var exampleView = new ExampleView($("#exampleView"),model);
    	var exampleViewController = new ExampleViewController(exampleView,model);
-   	var overviewView = new OverviewView($("overview_div"),model);
+   	var overviewView = new OverviewView($("#overview_div"),model);
+   	var overviewViewController = new OverviewViewController(overviewView,model);
 });
 
 function goToMain(){
@@ -18,8 +19,17 @@ function goToMain(){
 }
 
 function goToConfirmation() {
-	document.getElementById("overview_header").style.display = 'block';
-	document.getElementById("showDishImagesAndPrice").style.display = 'block';
+	document.getElementById("overview_div").style.display = 'block';
 	document.getElementById("searchframe").style.display = 'none';
 	document.getElementById("leftMenu").style.display = 'none';
+}
+
+function goToEdit() {
+	document.getElementById("overview_div").style.display = 'none';
+	document.getElementById("searchframe").style.display = 'block';
+	document.getElementById("leftMenu").style.display = 'block';
+}
+
+function goToSHowFullRecipe() {
+
 }

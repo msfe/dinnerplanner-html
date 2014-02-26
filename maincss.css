@@ -63,7 +63,6 @@
 	position: fixed;
 	margin-top: 125px;
 	background: rgb(255, 255, 255);
-	display: none;
 }
 
 
@@ -88,6 +87,10 @@
 	background: rgba(255, 255, 255, 0.7) ;
 }
 
+#overview_div {
+	display: none;
+}
+
 #leftMenu {
 	border-style: solid;
 	border-color: #000000;
@@ -110,7 +113,6 @@
 	margin-top: 225px;
 	background: rgb(255, 255, 0) transparent ;
 	background: rgba(255, 255, 0, 0.7) ;
-	display: none;
 }
 
 #h2 {

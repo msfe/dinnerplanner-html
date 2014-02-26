@@ -4,6 +4,8 @@ var OverviewView = function (container,model) {
     // Get all the relevant elements of the view (ones that show data
     // and/or ones that responed to interaction)
     // HÄR FÅR MARTIN KODA
+    this.goBackAndEditButton = container.find("#go_back_and_edit_button");
+    this.printFullRecipeButton = container.find("#printFullRecipeButton");
 
     //Creating the components dynamically. Here we create the following HTML content:
     //
