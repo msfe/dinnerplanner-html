@@ -16,19 +16,13 @@ var OverviewView = function (container,model) {
     //and add it to the the exampleView 
     
     //div we just store in temporary variable because we won't need it later
-    var div = $("<div>");
+    var div = document.getElementById("dishImagePart");
     //we set the constant text
-    div.html("Total menu price ");
+    div.innerHTML = "Total menu price";
     //and we add the text-primary class to make it blue
-    div.addClass("text-primary");
+    div.setAttribute("class","text-primary");
     
     
-    //total price we store in object variable (using this) so we can access it later
-    this.totalPrice = $("<span>");
-    //we set the id of the total price span
-    this.totalPrice.attr("id","totalPrice");
-    //we add total price span to the div
-    div.append(this.totalPrice);
     
     var tbl=document.createElement('table');
     tbl.style.width='100%';
@@ -60,7 +54,7 @@ var OverviewView = function (container,model) {
         tbdy.appendChild(tr)
     }
     tbl.appendChild(tbdy);
-    div.append(tbl);
+    div.appendChild(tbl);
 
     //finally we add the div to the view container
     container.append(div);
