@@ -17,14 +17,14 @@ var OverviewView = function (container,model) {
     //div we just store in temporary variable because we won't need it later
     var div = document.getElementById("dishImagePart");
     //we set the constant text
-    div.innerHTML = "Total menu price";
+    // div.innerHTML = "Total menu price";
     //and we add the text-primary class to make it blue
     div.setAttribute("class","text-primary");
     
     
     
     var tbl=document.createElement('table');
-    tbl.style.width='100%';
+    // tbl.style.width='100%';
     tbl.setAttribute('border','4');
     var tbdy=document.createElement('tbody');
     var tr=document.createElement('tr');
@@ -54,6 +54,7 @@ var OverviewView = function (container,model) {
     }
     tbl.appendChild(tbdy);
     div.appendChild(tbl);
+    console.log(div)
 
     
     

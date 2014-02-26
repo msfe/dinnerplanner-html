@@ -1,4 +1,4 @@
-#body {
+body {
 
 	/* Sätter bakgrunden så att den fyller ut rutan, inte repeteras och inte ändras när man skrollar*/
 	background:url(images/main_background.jpg);
@@ -159,7 +159,9 @@
 	margin-top: 125px;
 	display: none;
 	width: 100%;
+	height: auto;
 	position: absolute;
+	overflow: hidden
 }
 #overview_header {
 	width: 100%;
@@ -169,10 +171,17 @@
 }
 
 #dishImagePart{
-	position: :relative;
+display: inline-block;
+}
+
+#overviewImageAndTotal{
+}
+
+#menuTotalPrice{
+	display: inline-block;
 }
 
 #printButtonPart{
-	position: relative;
+	clear:both;
 }
 
