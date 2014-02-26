@@ -1,13 +1,13 @@
 //ExampleView Object constructor
-var ChoseDishView = function (container,model, dish) {
+var ChooseDishView = function (container,model, dish) {
 
     // Get all the relevant elements of the view (ones that show data
     // and/or ones that responed to interaction)
-    this.dishName = contain.find("#dishName");
-    this.dishImage = contain.find("#dishImage");
-    this.backToSelectDish = contain.find("#backToSelectDish");
-    this.ingridientsForNumberOfPersons = contain.find("#ingridientsForNumberOfPersons");
-    this.ingridientsList = contain.find("#ingridientsList");
+    this.dishName = container.find("#dishName");
+    this.dishImage = container.find("#dishImage");
+    this.backToSelectDish = container.find("#backToSelectDish");
+    this.ingridientsForNumberOfPersons = container.find("#ingridientsForNumberOfPersons");
+    this.ingridientsList = container.find("#ingridientsList");
     this.ConfirmButton = container.find("#ConfirmButton");
     this.TotPrice = container.find("#TotPrice");
     this.preparations = container.find("#preparations"); 
@@ -15,6 +15,8 @@ var ChoseDishView = function (container,model, dish) {
     //Set the inital values of the components
     this.dishName.html(dish.name);
     this.dishImage.html(dish.image);
+    this.TotPrice.html(model.getPriceOfDish(dish));
+    this.preparations.html(dish.description);
     
     /*****************************************  
           Observer implementation    
