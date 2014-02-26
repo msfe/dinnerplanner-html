@@ -31,10 +31,45 @@ var ExampleView = function (container,model) {
     //we add total price span to the div
     div.append(this.totalPrice);
     
-    var tbl=document.createElement('table');
+    var tbl=document.createElement("table");
+    tbl.setAttribute("id",'menutable')
     tbl.style.width='100%';
     tbl.setAttribute('border','4');
-    var tbdy=document.createElement('tbody');
+    var tbdy = fillTable(model);
+    tbl.appendChild(tbdy);
+    div.append(tbl);
+
+    //finally we add the div to the view container
+    container.append(div);
+    
+    //Set the inital values of the components
+    this.numberOfGuests.html(model.getNumberOfGuests());
+    this.totalPrice.html(model.getTotalMenuPrice());
+    
+    /*****************************************  
+          Observer implementation    
+          *****************************************/
+
+    //Register an observer to the model
+    model.addObserver(this);
+    
+    //This function gets called when there is a change at the model
+    this.update = function(arg){
+        this.numberOfGuests.html(model.getNumberOfGuests());
+        this.totalPrice.html(model.getTotalMenuPrice());
+
+        var table = document.getElementById('menutable');
+        var tbdyNew = fillTable(model);
+        tbl.replaceChild(tbdyNew,tbdy);
+        tbdy = tbdyNew;
+
+
+    }
+}
+
+
+function fillTable(model){
+        var tbdy=document.createElement('tbody');
     var tr=document.createElement('tr');
     var th=document.createElement('th');
     th.appendChild(document.createTextNode("Dish"));
@@ -60,28 +95,6 @@ var ExampleView = function (container,model) {
 
         tbdy.appendChild(tr)
     }
-    tbl.appendChild(tbdy);
-    div.append(tbl);
-
-    //finally we add the div to the view container
-    container.append(div);
     
-    //Set the inital values of the components
-    this.numberOfGuests.html(model.getNumberOfGuests());
-    this.totalPrice.html(model.getTotalMenuPrice());
-    
-    /*****************************************  
-          Observer implementation    
-          *****************************************/
-
-    //Register an observer to the model
-    model.addObserver(this);
-    
-    //This function gets called when there is a change at the model
-    this.update = function(arg){
-        this.numberOfGuests.html(model.getNumberOfGuests());
-        this.totalPrice.html(model.getTotalMenuPrice());
-    }
+    return tbdy;
 }
-
-

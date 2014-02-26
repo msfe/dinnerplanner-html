@@ -26,26 +26,11 @@ var OverviewView = function (container,model) {
     var tbl=document.createElement('table');
     // tbl.style.width='100%';
     tbl.setAttribute('border','0');
-    var tbdy=document.createElement('tbody');
+    
+    var tbdy = fillTableOverview(model);
 
-    var menu = model.getFullMenu();
-    var tr=document.createElement('tr');
-    for(var key in menu){
-        var dish = menu[key];
-        var td=document.createElement('td');
-        // td.appendChild(document.createTextNode(dish.name));
-        createDishViews(td,dish);
-        tr.appendChild(td);
-
-        var td=document.createElement('td');
-        td.appendChild(document.createTextNode(model.getPriceOfDish(dish)));
-        
-    }
-    tr.appendChild(td);
-    tbdy.appendChild(tr)
     tbl.appendChild(tbdy);
     div.appendChild(tbl);
-    console.log(div)
 
     
 
@@ -59,7 +44,33 @@ var OverviewView = function (container,model) {
     //This function gets called when there is a change at the model
     this.update = function(arg){
 
+        var table = document.getElementById('menutable');
+        var tbdyNew = fillTableOverview(model);
+        tbl.replaceChild(tbdyNew,tbdy);
+        tbdy = tbdyNew;
+
     }
 }
+
+function fillTableOverview(model){
+
+    var tbdy=document.createElement('tbody');
+
+    var menu = model.getFullMenu();
+    var tr=document.createElement('tr');
+    for(var key in menu){
+        var dish = menu[key];
+        var td=document.createElement('td');
+        // td.appendChild(document.createTextNode(dish.name));
+        createDishViews(td,dish,model.getPriceOfDish(dish) + " kr");
+        tr.appendChild(td);        
+    }
+    var td = document.createElement("td");
+    td.appendChild(document.createTextNode("Total Cost: " + model.getTotalMenuPrice()));
+    tr.appendChild(td);
+    tbdy.appendChild(tr);   
+
+    return tbdy;
+    }
 
 

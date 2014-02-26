@@ -14,6 +14,7 @@ $(function() {
    	var chooseDishViewController = new ChooseDishViewController(chooseDishView,model, model.getDish(1));
    	var fullRecipeView = new FullRecipeView($("#instructionsframe"),model);
    	var fullRecipeViewController = new FullRecipeViewController(fullRecipeView,model);
+   	var allDishesView = new AllDishesView($("#allDish"), model);
 });
 
 function goToMain(){
@@ -39,4 +40,22 @@ function goToInstructionFrame() {
 	document.getElementById("leftMenu").style.display = 'block';
 	document.getElementById("searchframe").style.display = 'none';
 	document.getElementById("instructionsframe").style.display = 'block';
+}
+
+var goToChoosenDishView = function(dish, model){
+this.dish = dish;
+this.model = model;
+
+
+
+return function(){
+
+document.getElementById("searchframe").style.display = 'none';
+document.getElementById("instructionsframe").style.display = 'block';
+
+	var chooseDishView = new ChooseDishView($("#instructionsframe"),model, dish);
+   	var chooseDishViewController = new ChooseDishViewController(chooseDishView,model, dish);
+}
+
+
 }

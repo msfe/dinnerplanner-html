@@ -4,7 +4,7 @@ var DinnerModel = function() {
 	var menu = [];
 	var numberOfGuests =3; //set default number of guests
 	menu['starter'] = 1; //set a starter to the menu, to use for testing
-	menu['main course'] = 100; //set a starter to the menu, to use for testing
+	menu['main dish'] = 100; //set a starter to the menu, to use for testing
 
 
 	this.setNumberOfGuests = function(num) {
@@ -66,6 +66,7 @@ var DinnerModel = function() {
 	//it is removed from the menu and the new one added.
 	this.addDishToMenu = function(id) {
 		menu[this.getDish(id).type] = id; 
+		notifyObservers();
 	}
 
 	//Removes dish from menu
@@ -73,6 +74,7 @@ var DinnerModel = function() {
 		var type = this.getDish(id).type;
 		if(menu[type] == id) {
 			delete menu[type];
+			notifyObservers();
 		}
 	}
 
