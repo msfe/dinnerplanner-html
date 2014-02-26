@@ -55,8 +55,7 @@ var OverviewView = function (container,model) {
     tbl.appendChild(tbdy);
     div.appendChild(tbl);
 
-    //finally we add the div to the view container
-    container.append(div);
+    
     
     
     /*****************************************  
