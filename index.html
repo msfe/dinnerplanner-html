@@ -57,132 +57,131 @@
 					<td>
 						<h3 id="h3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br><br>
 
-							Start quickly</h3>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<button type="Button" id="create" onclick="goToMain()">Create new dinner</button>
-						</td>
-					</tr>
-				</table>	
-			</div>
+							Start quickly
+						</h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<button type="Button" id="create" onclick="goToMain()">Create new dinner</button>
+					</td>
+				</tr>
+			</table>	
+		</div>
 
-			<div id = "searchframe">
-				<div id = "select_dish_search">
-					<h2 id="h2">Select dish</h2>
-					<table id="search_table">
+		<div id = "searchframe">
+			<div id = "select_dish_search">
+				<h2 id="h2">Select dish</h2>
+				<table id="search_table">
+					<tr>
+						<td id="searchWord">
+							<form>
+								<input type="text" name="firstname" placeholder="Enter key words">
+							</form>
+						</td>
+						<td id="searchTableButton">
+							<button id ="searchButton" type = "Button">Search</button>
+						</td>
+						<td id="searchCategory">
+							<select>
+								<option value="appetizer">Appetizer</option>
+								<option value="main">Main Course</option>
+								<option value="dessert">Dessert</option>
+							</select>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div id = "dish_images">
+				<!--Empty div, accessed by javascript-->
+			</div>	
+		</div>
+
+		<div id = "instructionsframe">
+			<table id="instructionTable">
+				<tr>
+					<td id="instructionPart">
+						<div id = "infoDish">
+							<h2 id = "dishName">[Dish Name]</h2>
+							<img id = "dishImage"></img>
+							<h3 id="h3">Lorem ipsum dolor.</h3>
+							<button id = "backToSelectDish" type = "Button">Back to Select Dish</button>
+						</div>
+					</td>
+					<td id="IngridientsPart">
+						<div id = "ingridients">
+							<div id = "ingridientsForNumberOfPersons">
+
+							</div>
+							<div id ="ingridientsList">
+
+							</div>
+
+							<div id ="confirmationAndTotPrice">
+								<table id="confirm_table">
+									<tr>
+										<td id="confirmButtonPart">
+											<button id = "ConfirmButton" type = "Button">Confirm Dish</button>
+										</td>
+										<td id="TotPricePart">
+											<h3 id = "TotPrice">Total Price</h3>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h2 id = "h2">Preparations</h2>
+						<h3 id = "preparations">[Preparations]</h3>
+					</td>
+				</tr>	
+			</table>
+		</div>
+
+		<div id = "overview_div">
+			<header>
+				<div id = "overview_header">
+					<table id = "overview_head_table">		
 						<tr>
-							<td id="searchWord">
-								<form>
-									<input type="text" name="firstname" placeholder="Enter key words">
-								</form>
+							<td id="overview_mydinner_text">
+
 							</td>
-							<td id="searchTableButton">
-								<button id ="searchButton" type = "Button">Search</button>
-							</td>
-							<td id="searchCategory">
-								<select>
-									<option value="appetizer">Appetizer</option>
-									<option value="main">Main Course</option>
-									<option value="dessert">Dessert</option>
-								</select>
+							<td id="overview_mydinner_button">
+								<button id ="go_back_and_edit_button" type = "Button">Go back and edit</button>
 							</td>
 						</tr>
 					</table>
 				</div>
-				<div id = "dish_images">
+			</header>
+			<div align="center">
+				<div id = "dishImagePart">
 					<!--Empty div, accessed by javascript-->
-				</div>	
-			</div>
-
-			<div id = "instructionsframe">
-				<table id="instructionTable">
-					<tr>
-						<td id="instructionPart">
-							<div id = "infoDish">
-								<h2 id = "dishName">[Dish Name]</h2>
-								<img id = "dishImage"></img>
-								<h3 id="h3">Lorem ipsum dolor.</h3>
-								<button id = "backToSelectDish" type = "Button">Back to Select Dish</button>
-							</div>
-						</td>
-						<td id="IngridientsPart">
-							<div id = "ingridients">
-								<div id = "ingridientsForNumberOfPersons">
-
-								</div>
-								<div id ="ingridientsList">
-
-								</div>
-
-								<div id ="confirmationAndTotPrice">
-									<table id="confirm_table">
-										<tr>
-											<td id="confirmButtonPart">
-												<button id = "ConfirmButton" type = "Button">Confirm Dish</button>
-											</td>
-											<td id="TotPricePart">
-												<h3 id = "TotPrice">Total Price</h3>
-											</td>
-										</tr>
-									</table>
-								</div>
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<h2 id = "h2">Preparations</h2>
-							<h3 id = "preparations">[Preparations]</h3>
-						</td>
-					</tr>	
-				</table>
-			</div>
-
-			<div id = "overview_div">
-				<header>
-					<div id = "overview_header">
-						<table id = "overview_head_table">		
-							<tr>
-								<td id="overview_mydinner_text">
-
-								</td>
-								<td id="overview_mydinner_button">
-									<button id ="go_back_and_edit_button" type = "Button">Go back and edit</button>
-								</td>
-							</tr>
-						</table>
-					</div>
-				</header>
-				<div align="center">
-					<div id = "dishImagePart">
-						<!--Empty div, accessed by javascript-->
-					</div>
-					<footer>
-						<div id = "printButtonPart">
-							<button id = "printFullRecipeButton" type = "Button">Print Full Recipe</button>
-						</div>
-					</footer>
-
 				</div>
-
-				<!-- jQuery -->
-				<script src="https://code.jquery.com/jquery.js"></script>
-				<!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
-				<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-
-				<!-- The application JavaScript code -->
-				<script src="js/app.js"></script>
-				<script src="js/model/dinnerModel.js"></script>
-				<script src="js/view/exampleView.js"></script>
-				<script src="js/view/exampleViewController.js"></script>
-				<script src="js/view/overviewView.js"></script>
-				<script src="js/view/overviewViewController.js"></script>
-				<script src="js/view/choseDishView.js"></script>
-				<script src="js/view/choseDishViewController.js"></script>
+				<footer>
+					<div id = "printButtonPart">
+						<button id = "printFullRecipeButton" type = "Button">Print Full Recipe</button>
+					</div>
+				</footer>
 			</div>
-		</body>
+		</div>
+		
+		<!-- jQuery -->
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 
-
-		</html>
+		<!-- The application JavaScript code -->
+		<script src="js/app.js"></script>
+		<script src="js/model/dinnerModel.js"></script>
+		<script src="js/view/exampleView.js"></script>
+		<script src="js/view/exampleViewController.js"></script>
+		<script src="js/view/overviewView.js"></script>
+		<script src="js/view/overviewViewController.js"></script>
+		<script src="js/view/choseDishView.js"></script>
+		<script src="js/view/choseDishViewController.js"></script>
+		<script src="js/view/dishImageView.js"></script>
+	</body>
+	</html>
