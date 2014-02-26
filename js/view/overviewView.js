@@ -5,6 +5,8 @@ var OverviewView = function (container,model) {
     // and/or ones that responed to interaction)
     // HÄR FÅR MARTIN KODA
     this.goBackAndEditButton = container.find("#go_back_and_edit_button");
+    this.printFullRecipeButton = container.find("#printFullRecipeButton");
+    this.text = container.find("#overview_mydinner_text");
 
     //Creating the components dynamically. Here we create the following HTML content:
     //
@@ -20,6 +22,7 @@ var OverviewView = function (container,model) {
     // div.innerHTML = "Total menu price";
     //and we add the text-primary class to make it blue
     div.setAttribute("class","text-primary");
+    this.text.html("My Dinner: " + model.getNumberOfGuests() + " Persons");
     
     
     
@@ -43,7 +46,7 @@ var OverviewView = function (container,model) {
     
     //This function gets called when there is a change at the model
     this.update = function(arg){
-
+        this.text.html("My Dinner: " + model.getNumberOfGuests() + " Persons");
         var table = document.getElementById('menutable');
         var tbdyNew = fillTableOverview(model);
         tbl.replaceChild(tbdyNew,tbdy);

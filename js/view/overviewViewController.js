@@ -4,4 +4,8 @@ var OverviewViewController = function(view, model ) {
 	view.goBackAndEditButton.click(function(){
 		goToEdit();
 	});
+
+	view.printFullRecipeButton.click(function(){
+		goToFullRecipe();
+	});
 }
