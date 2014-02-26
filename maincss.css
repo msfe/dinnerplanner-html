@@ -16,6 +16,10 @@ body {
 
 }
 
+#showFullRecipe {
+	display: none;
+}
+
 
 /* HEADER */
 #header {

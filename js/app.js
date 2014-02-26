@@ -12,6 +12,8 @@ $(function() {
    	var overviewViewController = new OverviewViewController(overviewView,model);
    	var chooseDishView = new ChooseDishView($("#instructionsframe"),model, model.getDish(1));
    	var chooseDishViewController = new ChooseDishViewController(chooseDishView,model, model.getDish(1));
+   	var fullRecipeView = new FullRecipeView($("#instructionsframe"),model);
+   	var fullRecipeViewController = new FullRecipeViewController(fullRecipeView,model);
 });
 
 function goToMain(){
