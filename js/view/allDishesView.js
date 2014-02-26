@@ -38,7 +38,8 @@ var AllDishesView = function (container,model) {
 		}
 		var dish = this.allDishes[key];
         var td=document.createElement('td');
-        createDishViews(td,dish,model.getPriceOfDish(dish));
+        var func = goToChoosenDishView(dish,model);
+        createDishViews(td,dish,model.getPriceOfDish(dish),func);
         tr.appendChild(td);        
 	}
 	tbl.appendChild(tr);
