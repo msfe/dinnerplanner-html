@@ -1,12 +1,9 @@
 //ExampleView Object constructor
-var ExampleView = function (container,model) {
+var OverviewView = function (container,model) {
 
     // Get all the relevant elements of the view (ones that show data
     // and/or ones that responed to interaction)
-    this.numberOfGuests = container.find("#numberOfGuests");
-    this.plusButton = container.find("#plusGuest");
-    this.minusButton = container.find("#minusGuest");
-    this.confirmDinnerButton = container.find("#confirmDinner");
+    // HÄR FÅR MARTIN KODA
 
     //Creating the components dynamically. Here we create the following HTML content:
     //
@@ -66,9 +63,6 @@ var ExampleView = function (container,model) {
     //finally we add the div to the view container
     container.append(div);
     
-    //Set the inital values of the components
-    this.numberOfGuests.html(model.getNumberOfGuests());
-    this.totalPrice.html(model.getTotalMenuPrice());
     
     /*****************************************  
           Observer implementation    
@@ -79,8 +73,7 @@ var ExampleView = function (container,model) {
     
     //This function gets called when there is a change at the model
     this.update = function(arg){
-        this.numberOfGuests.html(model.getNumberOfGuests());
-        this.totalPrice.html(model.getTotalMenuPrice());
+        
     }
 }
 

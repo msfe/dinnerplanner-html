@@ -16,6 +16,7 @@
 	border-left: 0px;
 	border-right: 0px;
 	position: fixed;
+	top: 0px;
 	width: 100%;
 	height: 125px;
 	background-color: yellow;
@@ -40,6 +41,42 @@
 }
 
 
+#searchframe {
+	border-style: solid;
+	border-color: #000000;
+	border-top: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	position: fixed;
+	width: 100%;
+	height: 100px;
+	margin-left:150px;
+	margin-top: 125px;
+	background: rgb(255, 255, 0) transparent ;
+	background: rgba(255, 255, 0, 0.7) ;	
+	display: none;
+}
+
+#overview_header {
+	width: 100%;
+	height:100px;
+	position: fixed;
+	margin-top: 125px;
+	background: rgb(255, 255, 255);
+	display: none;
+}
+
+
+#instructionsframe {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	margin-left:150px;
+	margin-top: 125px;
+	background: rgb(255, 255, 255);
+	display: none;
+}
+
 /* BOXEN */
 #smallmainframe {
 	margin-left: 150px;
@@ -63,6 +100,17 @@
 	margin-top: 125px;
 	background: rgb(255, 255, 0) transparent ;
 	background: rgba(255, 255, 0, 0.7) ;
+	display: none;
+}
+
+#showDishImagesAndPrice {
+	position: fixed;
+	width: 150%;
+	height: 100%;
+	margin-top: 225px;
+	background: rgb(255, 255, 0) transparent ;
+	background: rgba(255, 255, 0, 0.7) ;
+	display: none;
 }
 
 #h2 {
@@ -97,4 +145,21 @@
 
 #b {
 	width: 65%;
+}
+
+#instructionPart {
+	width: 50%;
+}
+
+#ingridientsPart {
+	width: 50%;
+}
+
+#ingridients {
+	border-style: solid;
+	border-color: #000000;
+	border-top: 0px;
+	border-right: 0px;
+	background: rgb(255, 255, 0);
+	display: none;
 }

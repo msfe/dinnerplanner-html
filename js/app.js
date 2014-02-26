@@ -8,4 +8,18 @@ $(function() {
 	//And create the needed controllers and views
 	var exampleView = new ExampleView($("#exampleView"),model);
    	var exampleViewController = new ExampleViewController(exampleView,model);
+   	var overviewView = new OverviewView($("overview_div"),model);
 });
+
+function goToMain(){
+	document.getElementById("leftMenu").style.display = 'block';
+	document.getElementById("searchframe").style.display = 'block';
+	document.getElementById("smallmainframe").style.display = 'none';
+}
+
+function goToConfirmation() {
+	document.getElementById("overview_header").style.display = 'block';
+	document.getElementById("showDishImagesAndPrice").style.display = 'block';
+	document.getElementById("searchframe").style.display = 'none';
+	document.getElementById("leftMenu").style.display = 'none';
+}
