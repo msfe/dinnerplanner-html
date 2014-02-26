@@ -10,6 +10,8 @@ $(function() {
    	var exampleViewController = new ExampleViewController(exampleView,model);
    	var overviewView = new OverviewView($("#overview_div"),model);
    	var overviewViewController = new OverviewViewController(overviewView,model);
+   	var chooseDishView = new ChooseDishView($("#instructionsframe"),model, model.getDish(1));
+   	var chooseDishViewController = new ChooseDishViewController(chooseDishView,model, model.getDish(1));
 });
 
 function goToMain(){
@@ -28,4 +30,10 @@ function goToEdit() {
 	document.getElementById("overview_div").style.display = 'none';
 	document.getElementById("searchframe").style.display = 'block';
 	document.getElementById("leftMenu").style.display = 'block';
+}
+
+function goToInstructionFrame() {
+	document.getElementById("leftMenu").style.display = 'block';
+	document.getElementById("searchframe").style.display = 'none';
+	document.getElementById("instructionsframe").style.display = 'block';
 }

@@ -10,6 +10,7 @@ var ExampleViewController = function(view, model ) {
 	});
 
 	view.confirmDinnerButton.click(function(){
+		// goToInstructionFrame();
 		goToConfirmation();
 	});
 }
