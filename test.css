@@ -1,0 +1,39 @@
+.hidden{
+	display:none;
+}
+
+.visible{
+	display:block;
+}
+
+.bottom_border{
+	border-bottom: 1px solid black
+}
+
+#topPanel{
+	height: 200px;
+	background-color: #00ff00;
+	border: 3px solid black;
+}
+#sidePanel{
+	width: 200px;
+	height: 500px;
+	float:left;
+	background-color: #ff0000;
+}
+
+#infoPanel{
+	height:500px;
+	overflow: hidden;;
+	background-color: #0000ff;
+}
+
+#container{
+	width:1000px;
+	margin:0 auto;
+	text-align: center;
+}
+
+h2{
+	color: #0000ff;
+}

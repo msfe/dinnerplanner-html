@@ -195,7 +195,9 @@ font-family: "Optima", "Segoe", "Segoe UI", "Candara", "Calibri", Arial, sans-se
 	margin-top: 125px;
 	display: none;
 	width: 100%;
+	height: auto;
 	position: absolute;
+	overflow: hidden
 }
 #overview_header {
 	width: 100%;
@@ -205,11 +207,18 @@ font-family: "Optima", "Segoe", "Segoe UI", "Candara", "Calibri", Arial, sans-se
 }
 
 #dishImagePart{
-	position: :relative;
+display: inline-block;
+}
+
+#overviewImageAndTotal{
+}
+
+#menuTotalPrice{
+	display: inline-block;
 }
 
 #printButtonPart{
-	position: relative;
+	clear:both;
 }
 
 
