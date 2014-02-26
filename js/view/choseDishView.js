@@ -17,7 +17,38 @@ var ChooseDishView = function (container,model, dish) {
     $("#dishImage").attr("src", "images/" + dish.image);
     this.TotPrice.html(model.getPriceOfDish(dish));
     this.preparations.html(dish.description);
+    var text = "Ingridients for " + model.getNumberOfGuests() + " persons";
+    this.ingridientsForNumberOfPersons.html(text);
     
+    var tbdy=document.createElement('tbody');
+    var ingridients = dish.ingredients;
+    for(var key in ingridients){
+        var iName = ingridients[key].name;
+        var iQuantity = ingridients[key].quantity;
+        var iUnit = ingridients[key].unit;
+        var iPrice = ingridients[key].price;
+
+        var tr=document.createElement('tr');
+        var td=document.createElement('td');
+        td.appendChild(document.createTextNode(iName));
+        tr.appendChild(td);
+
+        var td=document.createElement('td');
+        td.appendChild(document.createTextNode(iQuantity));
+        tr.appendChild(td);
+
+        var td=document.createElement('td');
+        td.appendChild(document.createTextNode(iUnit));
+        tr.appendChild(td);
+
+        var td=document.createElement('td');
+        td.appendChild(document.createTextNode(iPrice));
+        tr.appendChild(td);
+
+        tbdy.appendChild(tr)
+    }
+    this.ingridientsList.html(tbdy);
+
     /*****************************************  
           Observer implementation    
           *****************************************/
@@ -31,5 +62,3 @@ var ChooseDishView = function (container,model, dish) {
         this.totalPrice.html(model.getTotalMenuPrice());
     }
 }
-
-

@@ -30,6 +30,7 @@ function goToEdit() {
 	document.getElementById("overview_div").style.display = 'none';
 	document.getElementById("searchframe").style.display = 'block';
 	document.getElementById("leftMenu").style.display = 'block';
+	document.getElementById("instructionsframe").style.display = 'none';
 }
 
 function goToInstructionFrame() {
