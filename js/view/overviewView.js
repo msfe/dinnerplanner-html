@@ -25,40 +25,30 @@ var OverviewView = function (container,model) {
     
     var tbl=document.createElement('table');
     // tbl.style.width='100%';
-    tbl.setAttribute('border','4');
+    tbl.setAttribute('border','0');
     var tbdy=document.createElement('tbody');
-    var tr=document.createElement('tr');
-    var th=document.createElement('th');
-    th.appendChild(document.createTextNode("Dish"));
-    tr.appendChild(th);
-    var th=document.createElement('th');
-    th.appendChild(document.createTextNode("Cost"));
-    tr.appendChild(th);
-    tbdy.appendChild(tr);
-
 
     var menu = model.getFullMenu();
+    var tr=document.createElement('tr');
     for(var key in menu){
         var dish = menu[key];
-
-        var tr=document.createElement('tr');
         var td=document.createElement('td');
-        td.appendChild(document.createTextNode(dish.name));
+        // td.appendChild(document.createTextNode(dish.name));
+        createDishViews(td,dish);
         tr.appendChild(td);
 
         var td=document.createElement('td');
         td.appendChild(document.createTextNode(model.getPriceOfDish(dish)));
-        tr.appendChild(td);
-
-        tbdy.appendChild(tr)
+        
     }
+    tr.appendChild(td);
+    tbdy.appendChild(tr)
     tbl.appendChild(tbdy);
     div.appendChild(tbl);
     console.log(div)
 
     
-    
-    
+
     /*****************************************  
           Observer implementation    
           *****************************************/
@@ -68,7 +58,7 @@ var OverviewView = function (container,model) {
     
     //This function gets called when there is a change at the model
     this.update = function(arg){
-        
+
     }
 }
 

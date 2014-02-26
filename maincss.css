@@ -47,7 +47,7 @@ body {
 	/*background: rgb(255, 255, 255) transparent ;*/
 	color: #000000;
 	font-size: 20px;
-font-family: "Optima", "Segoe", "Segoe UI", "Candara", "Calibri", Arial, sans-serif;
+	font-family: "Optima", "Segoe", "Segoe UI", "Candara", "Calibri", Arial, sans-serif;
 }
 
 
@@ -74,7 +74,7 @@ font-family: "Optima", "Segoe", "Segoe UI", "Candara", "Calibri", Arial, sans-se
 	background: rgb(255, 255, 255) transparent ;
 	background: rgba(255, 255, 255, 0.7) ;
 
-padding: 10px;
+	padding: 10px;
 
 	display: none;
 }
@@ -113,14 +113,14 @@ padding: 10px;
 	font-weight: bold;
 
 
-	}
+}
 
 
-	#h3 {
+#h3 {
 	color:#000000;
 	text-align:left;
 	font-size: 16px;
-font-family: "Optima", "Segoe", "Segoe UI", "Candara", "Calibri", Arial, sans-serif;
+	font-family: "Optima", "Segoe", "Segoe UI", "Candara", "Calibri", Arial, sans-serif;
 
 }
 
@@ -132,11 +132,11 @@ font-family: "Optima", "Segoe", "Segoe UI", "Candara", "Calibri", Arial, sans-se
 	margin-bottom: 5px;
 
 	border-radius: 10px;
-    border-radius: 10px;
-    border-radius: 10px;
-    border-radius: 10px;
+	border-radius: 10px;
+	border-radius: 10px;
+	border-radius: 10px;
 
-    font-family: "Optima", "Segoe", "Segoe UI", "Candara", "Calibri", Arial, sans-serif;
+	font-family: "Optima", "Segoe", "Segoe UI", "Candara", "Calibri", Arial, sans-serif;
 
 }
 
@@ -154,8 +154,6 @@ font-family: "Optima", "Segoe", "Segoe UI", "Candara", "Calibri", Arial, sans-se
 
 
 }
-
-
 
 
 
@@ -201,7 +199,7 @@ font-family: "Optima", "Segoe", "Segoe UI", "Candara", "Calibri", Arial, sans-se
 }
 
 #dishImagePart{
-display: inline-block;
+	display: inline-block;
 }
 
 #printButtonPart{
@@ -211,35 +209,35 @@ display: inline-block;
 
 #confirmDinner {
 
-		background: rgb(255, 255, 255) transparent ;
+	background: rgb(255, 255, 255) transparent ;
 	background: rgba(255, 255, 255, 0.9) ;
 
 	margin-left: 5px;
 	margin-bottom: 5px;
 
 	border-radius: 10px;
-    border-radius: 10px;
-    border-radius: 10px;
-    border-radius: 10px;
+	border-radius: 10px;
+	border-radius: 10px;
+	border-radius: 10px;
 
-    font-family: "Optima", "Segoe", "Segoe UI", "Candara", "Calibri", Arial, sans-serif;
+	font-family: "Optima", "Segoe", "Segoe UI", "Candara", "Calibri", Arial, sans-serif;
 
 }
 
 #searchButton {
 
-		background: rgb(255, 255, 255) transparent ;
+	background: rgb(255, 255, 255) transparent ;
 	background: rgba(255, 255, 255, 0.9) ;
 
 	margin-left: 5px;
 	margin-bottom: 5px;
 
 	border-radius: 10px;
-    border-radius: 10px;
-    border-radius: 10px;
-    border-radius: 10px;
+	border-radius: 10px;
+	border-radius: 10px;
+	border-radius: 10px;
 
-    font-family: "Optima", "Segoe", "Segoe UI", "Candara", "Calibri", Arial, sans-serif;
+	font-family: "Optima", "Segoe", "Segoe UI", "Candara", "Calibri", Arial, sans-serif;
 
 }
 
