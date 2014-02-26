@@ -139,52 +139,53 @@
 						<tr>		
 						</table>
 					</div>
+						<div id = "overview_div">
+							<header>
+								<div id = "overview_header">
+									<table id = "overview_head_table">		
+										<tr>
+											<td id="overview_mydinner_text">
 
-					<div id = "overview_div">
-						<header>
-							<div id = "overview_header">
-								<table id = "overview_head_table">		
-									<tr>
-										<td id="overview_mydinner_text">
+											</td>
+											<td id="overview_mydinner_button">
+												<button id ="go_back_and_edit_button" type = "Button">Go back and edit</button>
+											</td>
+										</tr>
+									</table>
+								</div>
+							</header>
+							<div id="overviewImageAndTotal" align="center">
+								<div id = "dishImagePart">
+									<!--Empty div, accessed by javascript-->
+								</div>
+								<div id="menuTotalPrice">
+									<p>Total</p>
+								</div>
+							</div>
+							<footer>
+								<div id = "printButtonPart">
+									<button id = "printFullRecipeButton" type = "Button">Print Full Recipe</button>
+								</div>
+							</footer>
 
-										</td>
-										<td id="overview_mydinner_button">
-											<button id ="go_back_and_edit_button" type = "Button">Go back and edit</button>
-										</td>
-									</tr>
-								</table>
-							</div>
-						</header>
-						<article>
-							<div id = "dishImagePart">
-								<!--Empty div, accessed by javascript-->
-								<h3 id="h3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h3>
-							</div>
-						</article>
-						<footer>
-							<div id = "printButtonPart">
-								<button id = "printFullRecipeButton" type = "Button">Print Full Recipe</button>
-							</div>
-						</footer>
+						</div>
 
+						<!-- jQuery -->
+						<script src="https://code.jquery.com/jquery.js"></script>
+						<!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
+						<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+						<!-- The application JavaScript code -->
+						<script src="js/app.js"></script>
+						<script src="js/model/dinnerModel.js"></script>
+						<script src="js/view/exampleView.js"></script>
+						<script src="js/view/exampleViewController.js"></script>
+						<script src="js/view/overviewView.js"></script>
+						<script src="js/view/overviewViewController.js"></script>
+						<script src="js/view/choseDishView.js"></script>
+						<script src="js/view/choseDishViewController.js"></script>
 					</div>
-
-					<!-- jQuery -->
-					<script src="https://code.jquery.com/jquery.js"></script>
-					<!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
-					<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-
-					<!-- The application JavaScript code -->
-					<script src="js/app.js"></script>
-					<script src="js/model/dinnerModel.js"></script>
-					<script src="js/view/exampleView.js"></script>
-					<script src="js/view/exampleViewController.js"></script>
-					<script src="js/view/overviewView.js"></script>
-					<script src="js/view/overviewViewController.js"></script>
-					<script src="js/view/choseDishView.js"></script>
-					<script src="js/view/choseDishViewController.js"></script>
-				</div>
-			</body>
+				</body>
 
 
-			</html>
+				</html>
