@@ -1,7 +1,0 @@
-//ExampleViewController Object constructor
-var choseDishViewController = function(view, model ) {
-	
-	view.backToSelectDishButton.click(function(){
-		goToEdit();
-	});
-}
