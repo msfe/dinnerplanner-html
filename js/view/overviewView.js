@@ -34,18 +34,15 @@ var OverviewView = function (container,model) {
         var dish = menu[key];
         var td=document.createElement('td');
         // td.appendChild(document.createTextNode(dish.name));
-        createDishViews(td,dish);
-        tr.appendChild(td);
-
-        var td=document.createElement('td');
-        td.appendChild(document.createTextNode(model.getPriceOfDish(dish)));
-        
+        createDishViews(td,dish,model.getPriceOfDish(dish) + " kr");
+        tr.appendChild(td);        
     }
+    var td = document.createElement("td");
+    td.appendChild(document.createTextNode("Total Cost: " + model.getTotalMenuPrice()));
     tr.appendChild(td);
-    tbdy.appendChild(tr)
+    tbdy.appendChild(tr);   
     tbl.appendChild(tbdy);
     div.appendChild(tbl);
-    console.log(div)
 
     
 
